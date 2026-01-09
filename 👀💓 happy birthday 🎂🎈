@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday 💖</title>
+
+<style>
+body{
+  margin:0;
+  font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(#ffd6e8,#fff);
+  text-align:center;
+  color:#444;
+}
+
+#startBtn{
+  margin-top:45vh;
+  padding:20px 40px;
+  font-size:24px;
+  border:none;
+  border-radius:40px;
+  background:#ff8fb1;
+  color:white;
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.popup{
+  display:none;
+  position:fixed;
+  top:0;left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.4);
+}
+
+.popupBox{
+  background:white;
+  margin:30% auto;
+  width:80%;
+  padding:20px;
+  border-radius:25px;
+}
+
+.noteBox{
+  margin:50px auto;
+  width:85%;
+  background:#fff0f7;
+  padding:25px;
+  border-radius:30px;
+  font-size:20px;
+}
+
+.bigNote{
+  display:none;
+  background:white;
+  margin:20px;
+  padding:25px;
+  border-radius:30px;
+}
+</style>
+</head>
+
+<body>
+
+<button id="startBtn" onclick="openPopup()">click here 💓</button>
+
+<div class="popup" id="popup">
+  <div class="popupBox">
+    <h2>😺🎂 Happy Birthday!</h2>
+    <p>Wishing you the cutest & happiest birthday 💖</p>
+    <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" width="150">
+    <br><br>
+    <button onclick="closePopup()">Aww 🥹</button>
+  </div>
+</div>
+
+<audio id="music">
+  <source src="https://www.fesliyanstudios.com/play-mp3/387">
+</audio>
+
+<div class="noteBox" onclick="openNote()">
+  💌 Tap here to read a special birthday note 🎀
+</div>
+
+<div class="bigNote" id="note">
+  <h2>💖 Happy Birthday 💖</h2>
+  <p>
+  Today is not just your birthday,  
+  it’s the day the world became a little more beautiful 🌸<br><br>
+  May your heart always stay soft,  
+  your smile always stay bright ✨  
+  and your dreams always find their way to you 🌈<br><br>
+  You are deeply loved,  
+  more than you’ll ever know 🤍🎂
+  </p>
+  <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" width="200">
+</div>
+
+<script>
+function openPopup(){
+  document.getElementById("popup").style.display="block";
+  document.getElementById("music").play();
+}
+function closePopup(){
+  document.getElementById("popup").style.display="none";
+}
+function openNote(){
+  document.getElementById("note").style.display="block";
+  window.scrollTo(0,document.body.scrollHeight);
+}
+</script>
+
+</body>
+</html>
